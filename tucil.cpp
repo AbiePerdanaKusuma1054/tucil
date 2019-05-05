@@ -3,7 +3,7 @@ using namespace std;
 class identitas {
 	public:
 		char nama [20];
-		char norek [20];
+		char norek [10];
 		char transaksi;
 		int nominal;
 };
