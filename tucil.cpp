@@ -45,7 +45,6 @@ jum=0;
 }
 
 void menu (){
-	int pil;
 	cout<<"\n\t\t ===========================";
    	cout<<"\n\t\t ||  PROGRAM ANTRIAN BANK  ||";
    	cout<<"\n\t\t ==========================="<<endl<<endl;
@@ -54,9 +53,8 @@ void menu (){
     	cout<<"3. Keluar"<<endl;
     	cout<<endl;
     	cout<<"Masukkan pilihan Anda = ";
-    	cin>>pil;
-	cout<<"Anda memasukkan pilihan "<<pil;
 }
+
 int main(){
 	identitas id[15];
 	identitas ant[15];
