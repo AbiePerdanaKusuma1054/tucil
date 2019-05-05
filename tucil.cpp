@@ -78,7 +78,7 @@ int main()
             {
                 for(int j=cek;j<x;j++){
 	                system("cls");
-                	cout<<"\nAntrian dengan nomor"<<j+1<<"diproses\n";
+                	cout<<"\nAntrian dengan nomor "<<j+1<<" diproses\n";
                 	cout<<"\n\t\tData Nasabah \n\n";
 	               	cout<<"Nama Nasabah\t: "<<id[j].nama<<endl;
     	            cout<<"Nomor Rekening\t: "<<id[j].norek<<endl;
