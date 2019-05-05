@@ -44,6 +44,9 @@ int jum;
 jum=0;
 }
 
+/*Fungsi masukkan data
+void Enqueue*/
+
 void menu (){
 	cout<<"\n\t\t ===========================";
    	cout<<"\n\t\t ||  PROGRAM ANTRIAN BANK  ||";
