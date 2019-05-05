@@ -21,7 +21,7 @@ int main()
 {
 	identitas id[15];
 	char pil;
-	int x=0,hapus=0;
+	int x=0,hapus=0,cek=0;
 	do{
 		system("cls");
 		menu ();
@@ -76,7 +76,7 @@ int main()
 			}
 			else
             {
-                for(int j=0;j<x;j++){
+                for(int j=cek;j<x;j++){
 	                system("cls");
                 	cout<<"\nAntrian dengan nomor"<<j+1<<"diproses\n";
                 	cout<<"\n\t\tData Nasabah \n\n";
@@ -92,6 +92,7 @@ int main()
 		                cout<<" | ";
 					}
 					hapus++;
+					cek++;
 					cout<<endl;
 					system ("PAUSE");
             	}
