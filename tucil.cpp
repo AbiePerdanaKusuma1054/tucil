@@ -49,6 +49,15 @@ int main()
 			cout<<endl;
             x++;
             system("cls");
+			
+	    for(int i=1;i<=1;i++){
+		for(int j=1;j<=100;j++){
+			system("cls");
+			cout<<"LOADING "<<j<<"%";
+			system("cls");
+		}
+	}
+			
             cout<<"Data Antrian saat ini\t:\n\n";
 			for(int i=0;i<x;i++){
 				cout<<"Nomor Antri\t: "<<i+1;
