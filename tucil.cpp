@@ -39,9 +39,10 @@ antrian.head=antrian.tail=-1;
 cout << "Data Clear" ;
 }
 
-void tampil()
-{ int jum;
+void tampil(){ 
+int jum;
 jum=0;
+}
 
 void menu (){
 	int pil;
@@ -54,12 +55,14 @@ void menu (){
     	cout<<endl;
     	cout<<"Masukkan pilihan Anda = ";
     	cin>>pil;
+	cout<<"Anda memasukkan pilihan "<<pil;
 }
 int main(){
 	identitas id[15];
 	identitas ant[15];
-	char pil;
+	int pil;
 	int x;
+	
 	do{
 		system("cls");
 		menu ();
