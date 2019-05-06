@@ -7,16 +7,25 @@ class identitas {
 		char transaksi;
 		int nominal;
 };
+void admin (){
+	char adm []="ADMIN : RIKA NINGTIAS AZHARI";
+	char *ptradm = adm;
+	for (int i=0;i<28;i++)
+	cout<< *(ptradm+i);
+}
 void menu (){
-	cout<<"\n\t\t ===========================";
-    cout<<"\n\t\t ||  PROGRAM ANTRIAN BANK  ||";
-    cout<<"\n\t\t ==========================="<<endl<<endl;
-    cout<<"1. Masukan Antrian"<<endl;
+	cout<<"\n\t\t ==================================";
+    cout<<"\n\t\t ||  PROGRAM ADMIN ANTRIAN BANK  ||";
+    cout<<"\n\t\t =================================="<<endl<<endl;
+    admin ();
+    cout<<"\n";
+	cout<<"1. Masukan Antrian"<<endl;
     cout<<"2. Proses Antrian"<<endl;
     cout<<"3. Keluar"<<endl;
     cout<<endl;
     cout<<"Masukkan pilihan Anda (@ angka)\t= ";
 }
+
 int main()
 {
 	identitas id[15];
@@ -28,8 +37,11 @@ int main()
 		cin>>pil;
 		if (pil=='1'){
 			system("cls");
+			admin ();
+			cout<<"\n";
+			cin.ignore();
             cout<<"Nama Nasabah\t: ";
-            cin>>id[x].nama;
+            cin.getline(id[x].nama,20);
             cout<<"Nomor Rekening\t: ";
             cin>>id[x].norek;
             ulang:
@@ -48,16 +60,19 @@ int main()
 			}
 			cout<<endl;
             x++;
+            cout<<"Tekan ENTER Untuk Menyimpan Data\n";
+            system("PAUSE");
             system("cls");
 			
-	    for(int i=1;i<=1;i++){
-		for(int j=1;j<=100;j++){
-			system("cls");
-			cout<<"LOADING "<<j<<"%";
-			system("cls");
-		}
-	}
 			
+			for(int j=10;j<=90;j++){
+				system("cls");
+				cout<<"LOADING MENYIMPAN DATA "<<j+10<<"%";
+				system("cls");
+			}
+			
+			admin ();
+			cout<<"\n";
             cout<<"Data Antrian saat ini\t:\n\n";
 			for(int i=0;i<x;i++){
 				cout<<"Nomor Antri\t: "<<i+1;
@@ -87,11 +102,21 @@ int main()
             {
                 for(int j=cek;j<x;j++){
 	                system("cls");
-                	cout<<"\nAntrian dengan nomor "<<j+1<<" diproses\n";
+                	admin ();
+					cout<<"\n";
+					cout<<"\nAntrian dengan nomor "<<j+1<<" diproses\n";
                 	cout<<"\n\t\tData Nasabah \n\n";
 	               	cout<<"Nama Nasabah\t: "<<id[j].nama<<endl;
     	            cout<<"Nomor Rekening\t: "<<id[j].norek<<endl;
-        	        cout<<"Jenis Transaksi\t: "<<id[j].transaksi<<endl;
+        	        cout<<"Jenis Transaksi\t: ";
+        	        if((id[j].transaksi)=='A'||(id[j].transaksi)=='a')
+	                {
+	                    cout<<"Debet\n";
+	                }
+	                else if((id[j].transaksi)=='B'||(id[j].transaksi)=='b')
+	                {
+	                    cout<<"Kredit\n";
+	        		}
             	    cout<<"Nominal\t\t: "<<id[j].nominal<<endl;
                 	cout<<endl;
                    	cout<<"Nomor Antiran Saat Ini :";
